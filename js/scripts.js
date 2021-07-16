@@ -29,5 +29,5 @@ pizza.prototype.determineCost = function (message) {
 
 //User Interface Logic
 $(document).ready(function(event) {
-  
+  event.perventDefault();
 })
