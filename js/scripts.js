@@ -15,6 +15,10 @@ pizza.prototype.determineCost = function (message) {
       this.cost = 20 + this.toppings.length;
       message.push("Your total is $" + this.cost)
       break;
+    case ("small"):
+      this.cost = 10 + this.toppings.lenght;
+      message.push("Your total is $" + this.cost)
+      break;
 
   }
 }
