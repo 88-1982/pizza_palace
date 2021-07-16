@@ -25,3 +25,9 @@ pizza.prototype.determineCost = function (message) {
   }
   return this.cost;
 };
+
+
+//User Interface Logic
+$(document).ready(function(event) {
+  
+})
