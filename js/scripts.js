@@ -19,6 +19,9 @@ pizza.prototype.determineCost = function (message) {
       this.cost = 10 + this.toppings.lenght;
       message.push("Your total is $" + this.cost)
       break;
+      default:
+        message.push("Please pick a pizza size!")
 
   }
-}
+  return this.cost;
+};
