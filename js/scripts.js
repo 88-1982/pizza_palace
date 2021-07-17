@@ -21,6 +21,7 @@ pizza.prototype.determineCost = function (message) {
       break;
       default:
         message.push("Please pick a pizza size!")
+    
 
   }
   return this.cost;
@@ -29,5 +30,14 @@ pizza.prototype.determineCost = function (message) {
 
 //User Interface Logic
 $(document).ready(function(event) {
+  $("form#pizza-form").submit(function(event){
   event.perventDefault();
+  let size = $("#select-size option:selected").val();
+  let toppings = $("input:checkbox[name=toppings]:checked").map(function(){
+    return this.value
+  });
+
+
+  })
+
 })
