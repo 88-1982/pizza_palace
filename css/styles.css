@@ -1,6 +1,16 @@
 img {
   border-radius:50%;
   float:right
-  
+  }
 
+
+.big-box {
+  background-color: rgb(30, 55, 194);
 }
+.box {
+  color:white;
+  padding: 50px;
+  text-align: center;
+  padding-bottom: 80px;;
+}
+   
