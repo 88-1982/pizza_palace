@@ -36,8 +36,16 @@ $(document).ready(function(event) {
   let toppings = $("input:checkbox[name=toppings]:checked").map(function(){
     return this.value
   });
+  let pizza1 = new Pizza(size,toppings);
+    $("div#toppings-div").empty();
+    $("div#toppings-div").append("Number of Toppings: " + pizza1.toppings.length);
+    $("div#size-append").empty();
+    $("div#size-append").append("Pizza size: " + pizza1.size);
+    let message = []; 
+    pizza1.determineCost(message);
+    $("div#cost").empty();
+    $("div#cost").append(message);
 
+  });
 
-  })
-
-})
+});
