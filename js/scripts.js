@@ -19,33 +19,31 @@ pizza.prototype.determineCost = function (message) {
       this.cost = 10 + this.toppings.lenght;
       message.push("Your total is $" + this.cost)
       break;
-      default:
-        message.push("Please pick a pizza size!")
-    
+    default:
+      message.push("Please pick a pizza size!")
+
 
   }
   return this.cost;
-};
+}
 
 
 //User Interface Logic
-$(document).ready(function(event) {
-  $("form#pizza-form").submit(function(event){
-  event.perventDefault();
-  let size = $("#select-size option:selected").val();
-  let toppings = $("input:checkbox[name=toppings]:checked").map(function(){
-    return this.value
-  });
-  let pizza1 = new Pizza(size,toppings);
+$(document).ready(function (event) {
+  $("form#pizza-form").submit(function (event) {
+    event.preventDefault();
+    let size = $("#select-size option:selected").val();
+    let toppings = $("input:checkbox[name=toppings]:checked").map(function () {
+      return this.value
+    });
+    let pizza1 = new pizza(size, toppings);
     $("div#toppings-div").empty();
-    $("div#toppings-div").append("Number of Toppings: " + pizza1.toppings.length);
+    $("div#toppings-div").append("Number of Toppings:" + pizza1.toppings.length);
     $("div#size-append").empty();
-    $("div#size-append").append("Pizza size: " + pizza1.size);
-    let message = []; 
+    $("div#size-append").append("Pizza size:" + pizza1.size);
+    let message = [];
     pizza1.determineCost(message);
     $("div#cost").empty();
     $("div#cost").append(message);
-
   });
-
 });
