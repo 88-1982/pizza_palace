@@ -27,8 +27,11 @@ Keep it simple to start! You do not need to have a complex formula for determini
 Describe: forLoop(number)
 
 Test 1: "It will create a pizza object with topping and size properties."
-code: pizza1.size; "medium"
-Expect: pizza1 = new pizza ([pepperoni,green onion],medium).toEqual(pizza1 {toppings: ["pepperoni","green onion"], size: "medium"});
+code: pizza1.size; "Large"
+Expect: pizza1 = new pizza ([pepperoni,onion],Large).toEqual(pizza1 {toppings: ["pepperoni","onion"], size: "Large"});
+Test 2: "It will take the users selection of pizza size and give the user a price based of selected pizza"
+code: this.cost + toppings 
+Expect: pizza1.cost.toEqual($32)
 
 
 
